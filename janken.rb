@@ -19,7 +19,7 @@ class Player  #manage the player's input
 end
 class Enemy
   def hand
-    input_enemy = 0+rand(3) #generate 3 random numbers starting at 0
+    input_enemy = rand(3) #generate 3 random numbers starting at 0
     return input_enemy
   end
 end
@@ -44,7 +44,9 @@ end
   janken=Janken.new
   janken.pon(player.hand,enemy.hand)
 
-while true #replay
+i=0
+while i<4 #replay 4
   puts "-----------TERMINATE--------------"
   next_game=janken.pon(player.hand,enemy.hand)
+  i+=1
 end
